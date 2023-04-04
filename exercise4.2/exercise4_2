@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void odd_even( int *pi, size_t size);
+
+int main(void)
+{
+	//int a[5] = { 2,1,3,4, 7};
+	int a[10] = { 3, 12, 45, 32, 89, 90, 46, 21, 65, 68 };
+	odd_even(a,10);
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d", a[i]);
+		printf(" \n");
+	}
+		
+
+	return 0;
+}
+
+
+void odd_even(int* pi, size_t size) // 2 1 3 4 
+{
+	int i = 0;
+	for (int j=0 ; j < size / 2; j++) 
+		for (int i = 0; i < size / 2; i++)
+		{
+			int temp = pi[j];
+			(pi[j] % 2 == 0 && pi[size - 1 - i] % 2 != 0) ? (pi[j] = pi[size - 1 - i], pi[size - 1 - i] = temp) : (pi[j] = pi[j], pi[size - 1 - i] = pi[size - 1 - i]);
+		}
+
+}
