@@ -17,6 +17,7 @@ char *trim(char *str);
 
 int main(void)
 {
+
 	char s[] = "    \t     \t   ali veli selami     \t    ";
 
 	trim(s);
@@ -40,6 +41,7 @@ void odd_even(int *pi, size_t size);
 
 int main(void)
 {
+
 	int a[10] = { 3, 12, 45, 32, 89, 90, 46, 21, 65, 68 };
 	int i;
 
@@ -66,6 +68,7 @@ int mode(int *pi, size_t size);
 
 int main(void)
 {
+
 	int a[10] = {3, 5, 6, 3, 5, 3, 7, 8, 7, 3};
 	int result;
 
@@ -97,6 +100,7 @@ char *erase_char(char *str, int ch);
 
 int main(void)
 {
+
 	char s[] = "ankara adana";
 
 	eracse_char(s, 'a');
